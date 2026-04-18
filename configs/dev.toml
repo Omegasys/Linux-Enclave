@@ -1,0 +1,22 @@
+# Development configuration (less strict, more verbose)
+
+[enclave]
+id = "dev-enclave"
+max_tasks = 64
+debug = true
+
+[crypto]
+key_type = "simulated"
+rng = "thread_rng"
+
+[security]
+enforce_isolation = false
+enable_attestation = true
+sandbox_enabled = false
+
+[network]
+enable_network = true
+max_peers = 32
+
+[logging]
+level = "debug"
