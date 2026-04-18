@@ -1,0 +1,20 @@
+# Policy definitions for sandbox + execution control
+
+[policy.default]
+allow_execution = true
+max_payload_size = 1024
+
+[policy.restricted]
+allow_execution = true
+max_payload_size = 256
+
+[policy.strict]
+allow_execution = false
+max_payload_size = 0
+
+[attestation]
+required = true
+max_age_seconds = 300
+
+[identity]
+require_known_enclave = false
