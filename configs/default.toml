@@ -1,0 +1,22 @@
+# Default configuration for Linux Enclave
+
+[enclave]
+id = "default-enclave"
+max_tasks = 16
+debug = false
+
+[crypto]
+key_type = "simulated"
+rng = "thread_rng"
+
+[security]
+enforce_isolation = true
+enable_attestation = true
+sandbox_enabled = true
+
+[network]
+enable_network = true
+max_peers = 8
+
+[logging]
+level = "info"
