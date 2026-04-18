@@ -1,0 +1,25 @@
+# High-security configuration
+
+[enclave]
+id = "secure-enclave"
+max_tasks = 8
+debug = false
+
+[crypto]
+key_type = "strict"
+rng = "secure"
+
+[security]
+enforce_isolation = true
+enable_attestation = true
+sandbox_enabled = true
+require_signed_tasks = true
+zeroize_on_shutdown = true
+
+[network]
+enable_network = true
+max_peers = 4
+require_encrypted_channels = true
+
+[logging]
+level = "warn"
